@@ -113,53 +113,53 @@
         </div>
         <form action="respond.php" method="post">
             <div class="item">
-                <p>姓名</p>
+                <label for="studentname">姓名</label>
                 <span>*</span><br>
-                <input type="text" name="studentname">
+                <input type="text" name="studentname" id="studentname">
             </div>
             <div class="item">
-                <p>聯絡電話</p>
+                <label for="phone">聯絡電話</label>
                 <span>*</span><br>
-                <input type="text" name="phone">
+                <input type="text" name="phone" id="phone">
             </div>
             <div class="item">
-                <p>畢業高中/班級</p>
+                <label for="senior">畢業高中/班級</label>
                 <span>*</span><br>
-                <input type="text" name="junior">
+                <input type="text" name="senior" id="senior">
             </div>
             <div class="item">
-                <p>目標大學</p>
+                <label for="adress">目標大學</label>
                 <span></span><br>
-                <input type="text" name="adress">
+                <input type="text" name="adress" id="adress">
             </div>
             <div class="item">
                 <p>預約科目</p>
                 <span></span><p></p>
-                <input type="checkbox" name="suject1" value="物件導向系統分析"><p>物件導向系統分析</p>
-                <input type="checkbox" name="suject2" value="電子商務"><p>電子商務</p>
-                <input type="checkbox" name="suject3" value="資訊網路"><p>資訊網路</p>
-                <input type="checkbox" name="suject4" value="資料庫設計與管理"><p>資料庫設計與管理</p>
-                <input type="checkbox" name="suject5" value="專案管理"><p>專案管理</p>
+                <input type="checkbox" name="suject1" id="suject1" value="物件導向系統分析"><label for="suject1">物件導向系統分析</label>
+                <input type="checkbox" name="suject2" id="suject2" value="電子商務"><label for="suject2">電子商務</label>
+                <input type="checkbox" name="suject3" id="suject3" value="資訊網路"><label for="suject3">資訊網路</label>
+                <input type="checkbox" name="suject4" id="suject4" value="資料庫設計與管理"><label for="suject4">資料庫設計與管理</label>
+                <input type="checkbox" name="suject5" id="suject5" value="專案管理"><label for="suject5">專案管理</label>
             </div>
             <div class="item">
-                <p>日期</p>
+                <label for="date">日期</label>
                 <span></span><br>
-                <input type="text" name="email">
+                <input type="text" name="date" id="date">
             </div>
             <div class="item">
                 <p>身份</p>
-                <label for="">
-                    <input type="radio" name="type" value="學生">
+                <label for="student">
+                    <input type="radio" id="student" name="type" value="學生">
                     <P>學生</P>
                 </label>
-                <label for="">
-                    <input type="radio" name="type" value="家長">
+                <label for="parents">
+                    <input type="radio" id="parents" name="type" value="家長">
                     <p>家長</p>
                 </label>
             </div>
             <div class="item">
-                <p>備註</p><br>
-                <input type="text" name="" class="contant">
+                <label for="contant">備註</label><br>
+                <input type="text" name="" class="contant" id="contant">
             </div>
             <div class="send">
                 <input type="submit" value="送出" class="myButton">
