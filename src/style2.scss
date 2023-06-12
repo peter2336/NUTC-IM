@@ -1,0 +1,440 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Noto Sans TC', sans-serif;
+}
+@mixin pad {
+    @media screen and (min-width:1000px) {
+        @content;
+    }
+}
+@mixin phone {
+    @media screen and (max-width:600px) {
+        @content;
+    }
+}
+@mixin  phone2 {
+    @media screen and (max-width:1000px) {
+        @content;
+    }
+}
+html {
+    scroll-behavior: smooth;
+}
+
+header {
+    display: flex;
+    flex-wrap: wrap;
+    position: sticky;
+    top: 0;
+    // z-index: 5;
+    z-index: 2;
+    background-color: #fff;
+    box-shadow: 3px 3px 5px 1px #c9c9c9;
+    align-items: center;
+    div.logo {
+        flex: 2 1 auto;
+        display: flex;
+        margin-left: 2rem;
+        align-items: center;
+        justify-content: center;
+        img {
+            padding: 0.5rem;
+        }
+
+        h1 {
+            font-size: 20px;
+            color: #000000;
+        }
+    }
+}
+.wrapper{
+    width: 90%;
+    margin: 0 auto;
+    .container2{
+        // background-color: #1A1A1A;
+        width: 40px;
+        height: 25px;
+        position: fixed;
+        z-index: 4;
+        top: 1%;
+        left: 1%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: column;
+        cursor: pointer;
+        .meaulogo{
+            width: 30px;
+            height: 3px;
+            background-color: #1A1A1A;
+        }
+    }
+}
+section.section-nav{
+    width: 100%;
+}
+.section-nav{
+    .meau{
+        width: 100%;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 3;
+        transform: translateX(-5000px);
+        transition: 0.5s;
+        display: flex;
+        ul{
+            width: 30%;
+            background-color: #b6dfd2;
+            height: 100vh;
+            padding: 50px;
+            @include phone{
+                width: 50%;
+                padding: 50px 20px;
+            }
+            @include phone2{
+                width: 100%;
+                padding: 50px 20px;
+            }
+            li{
+                text-align: center;
+                border-bottom: 1px solid rgb(255, 255, 255);
+                padding: 15px;
+                @include phone{
+                    padding: 10px 0 ;
+                }
+                @include phone2{
+                    padding: 15px 0;
+                }
+                a{
+                    color: rgb(0, 0, 0);
+                    font-size: 20px;
+                    img{
+                        @include phone{
+                            width: 20px;
+                        }
+                    }
+                    @include phone{
+                        font-size: 12px;
+                    }
+                    @include phone2{
+                        font-size: 20px;
+                    }
+                }
+                a:hover{
+                    font-weight: bold;
+                    transition: 0.2s;
+                    color: rgb(52, 140, 241);
+                }
+            }
+        }
+        .onetwo{
+            width: 70%;
+            background-color:rgba(0, 0, 0, 0.13);
+            @include phone{
+                width: 50%;
+            }
+
+            @include phone2{
+                width: 0%;
+            }
+        }
+    }
+    .showmeau{
+        transform: translateX(0px);
+    }
+}
+div.container {
+    width: 100%;
+    height: 100vh;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    z-index: 1;
+    @include phone{
+        height: auto;
+    }
+    div.swiper {
+        top: 3rem;
+        width: 80%;
+        height: fit-content;
+        background: #fff;
+        div.swiper-wrapper {
+            div.swiper-slide img {
+                width: 80vw;
+                height: 80vh;
+                @include phone{
+                    height: auto;
+                }
+            }
+        }
+
+        div.swiper-button-prev,
+        div.swiper-button-next {
+            color:#1A1A1A;
+        }
+
+        div.swiper-pagination-bullet-active {
+            background: #fff;
+        }
+    }
+}
+
+section.news {
+    width: 100%;
+    // height: 100vh;
+    align-items: center;
+    div.newsContainer {
+        width: 100%;
+        justify-content: center;
+        display: flex;
+        align-items: center;
+        @include phone{
+            flex-direction: column;
+        }
+        div.news-Image {
+            padding: 0 2%;
+            .news-Image-1{
+                transform: translateX(-1000px);
+                transition: 1.6s;
+                @include phone{
+                    transform: translateX(0px);
+                    width: 90%;
+                    margin: 2% 5%;
+                }
+            }
+            .news-Image-2{
+                transform: translateX(-1500px);
+                transition: 1.6s;
+                @include phone{
+                    width: 90%;
+                    margin: 2% 5%;
+                }
+            }
+            .news-Image-3{
+                transform: translateX(-2000px);
+                transition: 1.6s;
+                @include phone{
+                    width: 90%;
+                    margin: 2% 5%;
+                }
+            }
+            img {
+                width: 40vw;
+            }
+            .move{
+                transform: translateX(0px);
+            }
+        }
+    }
+    div.newsTitle {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        h1 {
+            font-size: 24px;
+            color: #1A1A1A;
+            padding: 5rem;
+        }
+    } 
+  
+}
+
+section.classIntro {
+    width: 100%;
+    // height: 100vh;
+    align-items: center;
+    div.classIntroContainer {
+        // max-width: 1920px;
+        overflow: hidden;
+        justify-content: center;
+        display: flex;
+        align-items: center;
+        @include phone{
+            flex-direction: column;
+        }
+        div.classIntro-Image {
+            padding: 0 2%;
+            .classIntro-Image-1{
+                transform: translateX(4000px);
+                transition: 2s;
+            }
+            .classIntro-Image-2{
+                transform: translateX(5000px);
+                transition: 3s;
+            }
+            .classIntro-Image-3{
+                transform: translateX(6000px);
+                transition: 2s;
+            }
+            img {
+                width: 40vw;
+                @include phone{
+                    width: 90%;
+                    margin: 2% 5%;
+                }
+            }
+            .moveagain{
+                transform: translateX(0px);
+            }
+        }
+    }
+    div.classIntroTitle {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        h1 {
+            font-size: 24px;
+            color: #1A1A1A;
+            padding: 5rem;
+        }
+    }
+}
+.section2{
+    width: 90%;
+    margin: auto;
+    a{
+        color: rgb(0, 0, 0);
+        display: inline-block;
+    }
+    .form{
+        width: 90%;
+        margin: auto;
+        text-align: center;
+        font-size: 50px;
+    }
+    form{
+        width: 90%;
+        margin: auto;
+        input[type=text]{
+            width: 90%;
+        }
+        input[type=radio]{
+            color: rgb(0, 0, 0);
+        }
+        .contant{
+            height: 2rem;
+            margin: 10px 0;
+        }
+        .contant{
+            transform: translateY(-0.5rem);
+            white-space: normal;
+        }
+        .myButton {
+            box-shadow: 0px 1px 0px 0px #fff6af;
+            /* background:linear-gradient(to bottom, #ffec64 5%, #ffab23 100%); */
+            /* background-color:#ffec64; */
+            background-color: #ffaa22;
+            border-radius:6px;
+            border:1px solid #ffaa22;
+            display:inline-block;
+            cursor:pointer;
+            color:#333333;
+            font-family:Arial;
+            font-size:15px;
+            font-weight:bold;
+            padding:6px 24px;
+            text-decoration:none;
+            /* text-shadow:0px 1px 0px #ffee66; */
+            margin-top: 5px;
+        }
+        .myButton:hover {
+            background:linear-gradient(to bottom, #ffab23 5%, #ffec64 100%);
+            background-color:#ffab23;
+        }
+        .myButton:active {
+            position:relative;
+            top:1px;
+        }
+    }
+    p{
+        color: rgb(0, 0, 0);
+        display: inline-block;
+    }
+    span{
+        color: red;
+    }
+}
+footer.contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    div.logo{
+        display: flex;
+        align-items: center;
+        h1 {
+            font-size: 16px;
+            color: #1A1A1A;
+        }
+        img {
+            padding: 0.5rem;
+        }
+    }
+
+    div.phoneNumber {
+        display: flex;
+        p {
+            font-size: 16px;
+            padding: 0.5rem;
+        }
+    }
+}
+
+div.goTop {
+    width: 5%;
+    position: fixed;
+    right: 2rem;
+    bottom: 1rem;
+    transition: all 0.2s;
+    z-index: 5;
+    @include phone{
+        width: 10%;
+        right: 1rem;
+    }
+    @include phone2{
+        min-width: 4rem;
+        right: 0.5rem;
+    }
+    a {
+        // background-color: #c9c9c9;
+        padding: 1rem;
+    }
+
+}
+div.goTop:hover {
+    transform: scale(1.1);
+}
+.teacher{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    .container3{
+        display: flex;
+        width: 90%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        .cont-course{
+            border: 3px solid black;
+            border-radius: 2%;
+            width: 25%;
+            margin: 3%;
+            background-color: #b6dfd2;
+            @include phone2 {
+                width: 50%;
+            }
+
+            @include phone {
+                width: 70%;
+            }
+            p{
+                padding: 0 3%;
+                font-size: 16px;
+            }
+        }
+    }
+}

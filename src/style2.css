@@ -1,0 +1,457 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Noto Sans TC", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+header {
+  display: flex;
+  flex-wrap: wrap;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  background-color: #fff;
+  box-shadow: 3px 3px 5px 1px #c9c9c9;
+  align-items: center;
+}
+header div.logo {
+  flex: 2 1 auto;
+  display: flex;
+  margin-left: 2rem;
+  align-items: center;
+  justify-content: center;
+}
+header div.logo img {
+  padding: 0.5rem;
+}
+header div.logo h1 {
+  font-size: 20px;
+  color: #000000;
+}
+
+.wrapper {
+  width: 90%;
+  margin: 0 auto;
+}
+.wrapper .container2 {
+  width: 40px;
+  height: 25px;
+  position: fixed;
+  z-index: 4;
+  top: 1%;
+  left: 1%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  cursor: pointer;
+}
+.wrapper .container2 .meaulogo {
+  width: 30px;
+  height: 3px;
+  background-color: #1A1A1A;
+}
+
+section.section-nav {
+  width: 100%;
+}
+
+.section-nav .meau {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  transform: translateX(-5000px);
+  transition: 0.5s;
+  display: flex;
+}
+.section-nav .meau ul {
+  width: 30%;
+  background-color: #b6dfd2;
+  height: 100vh;
+  padding: 50px;
+}
+@media screen and (max-width: 600px) {
+  .section-nav .meau ul {
+    width: 50%;
+    padding: 50px 20px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .section-nav .meau ul {
+    width: 100%;
+    padding: 50px 20px;
+  }
+}
+.section-nav .meau ul li {
+  text-align: center;
+  border-bottom: 1px solid rgb(255, 255, 255);
+  padding: 15px;
+}
+@media screen and (max-width: 600px) {
+  .section-nav .meau ul li {
+    padding: 10px 0;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .section-nav .meau ul li {
+    padding: 15px 0;
+  }
+}
+.section-nav .meau ul li a {
+  color: rgb(0, 0, 0);
+  font-size: 20px;
+}
+@media screen and (max-width: 600px) {
+  .section-nav .meau ul li a img {
+    width: 20px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .section-nav .meau ul li a {
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .section-nav .meau ul li a {
+    font-size: 20px;
+  }
+}
+.section-nav .meau ul li a:hover {
+  font-weight: bold;
+  transition: 0.2s;
+  color: rgb(52, 140, 241);
+}
+.section-nav .meau .onetwo {
+  width: 70%;
+  background-color: rgba(0, 0, 0, 0.13);
+}
+@media screen and (max-width: 600px) {
+  .section-nav .meau .onetwo {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .section-nav .meau .onetwo {
+    width: 0%;
+  }
+}
+.section-nav .showmeau {
+  transform: translateX(0px);
+}
+
+div.container {
+  width: 100%;
+  height: 100vh;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  z-index: 1;
+}
+@media screen and (max-width: 600px) {
+  div.container {
+    height: auto;
+  }
+}
+div.container div.swiper {
+  top: 3rem;
+  width: 80%;
+  height: -moz-fit-content;
+  height: fit-content;
+  background: #fff;
+}
+div.container div.swiper div.swiper-wrapper div.swiper-slide img {
+  width: 80vw;
+  height: 80vh;
+}
+@media screen and (max-width: 600px) {
+  div.container div.swiper div.swiper-wrapper div.swiper-slide img {
+    height: auto;
+  }
+}
+div.container div.swiper div.swiper-button-prev,
+div.container div.swiper div.swiper-button-next {
+  color: #1A1A1A;
+}
+div.container div.swiper div.swiper-pagination-bullet-active {
+  background: #fff;
+}
+
+section.news {
+  width: 100%;
+  align-items: center;
+}
+section.news div.newsContainer {
+  width: 100%;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}
+@media screen and (max-width: 600px) {
+  section.news div.newsContainer {
+    flex-direction: column;
+  }
+}
+section.news div.newsContainer div.news-Image {
+  padding: 0 2%;
+}
+section.news div.newsContainer div.news-Image .news-Image-1 {
+  transform: translateX(-1000px);
+  transition: 1.6s;
+}
+@media screen and (max-width: 600px) {
+  section.news div.newsContainer div.news-Image .news-Image-1 {
+    transform: translateX(0px);
+    width: 90%;
+    margin: 2% 5%;
+  }
+}
+section.news div.newsContainer div.news-Image .news-Image-2 {
+  transform: translateX(-1500px);
+  transition: 1.6s;
+}
+@media screen and (max-width: 600px) {
+  section.news div.newsContainer div.news-Image .news-Image-2 {
+    width: 90%;
+    margin: 2% 5%;
+  }
+}
+section.news div.newsContainer div.news-Image .news-Image-3 {
+  transform: translateX(-2000px);
+  transition: 1.6s;
+}
+@media screen and (max-width: 600px) {
+  section.news div.newsContainer div.news-Image .news-Image-3 {
+    width: 90%;
+    margin: 2% 5%;
+  }
+}
+section.news div.newsContainer div.news-Image img {
+  width: 40vw;
+}
+section.news div.newsContainer div.news-Image .move {
+  transform: translateX(0px);
+}
+section.news div.newsTitle {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+section.news div.newsTitle h1 {
+  font-size: 24px;
+  color: #1A1A1A;
+  padding: 5rem;
+}
+
+section.classIntro {
+  width: 100%;
+  align-items: center;
+}
+section.classIntro div.classIntroContainer {
+  overflow: hidden;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}
+@media screen and (max-width: 600px) {
+  section.classIntro div.classIntroContainer {
+    flex-direction: column;
+  }
+}
+section.classIntro div.classIntroContainer div.classIntro-Image {
+  padding: 0 2%;
+}
+section.classIntro div.classIntroContainer div.classIntro-Image .classIntro-Image-1 {
+  transform: translateX(4000px);
+  transition: 2s;
+}
+section.classIntro div.classIntroContainer div.classIntro-Image .classIntro-Image-2 {
+  transform: translateX(5000px);
+  transition: 3s;
+}
+section.classIntro div.classIntroContainer div.classIntro-Image .classIntro-Image-3 {
+  transform: translateX(6000px);
+  transition: 2s;
+}
+section.classIntro div.classIntroContainer div.classIntro-Image img {
+  width: 40vw;
+}
+@media screen and (max-width: 600px) {
+  section.classIntro div.classIntroContainer div.classIntro-Image img {
+    width: 90%;
+    margin: 2% 5%;
+  }
+}
+section.classIntro div.classIntroContainer div.classIntro-Image .moveagain {
+  transform: translateX(0px);
+}
+section.classIntro div.classIntroTitle {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+section.classIntro div.classIntroTitle h1 {
+  font-size: 24px;
+  color: #1A1A1A;
+  padding: 5rem;
+}
+
+.section2 {
+  width: 90%;
+  margin: auto;
+}
+.section2 a {
+  color: rgb(0, 0, 0);
+  display: inline-block;
+}
+.section2 .form {
+  width: 90%;
+  margin: auto;
+  text-align: center;
+  font-size: 50px;
+}
+.section2 form {
+  width: 90%;
+  margin: auto;
+}
+.section2 form input[type=text] {
+  width: 90%;
+}
+.section2 form input[type=radio] {
+  color: rgb(0, 0, 0);
+}
+.section2 form .contant {
+  height: 2rem;
+  margin: 10px 0;
+}
+.section2 form .contant {
+  transform: translateY(-0.5rem);
+  white-space: normal;
+}
+.section2 form .myButton {
+  box-shadow: 0px 1px 0px 0px #fff6af;
+  /* background:linear-gradient(to bottom, #ffec64 5%, #ffab23 100%); */
+  /* background-color:#ffec64; */
+  background-color: #ffaa22;
+  border-radius: 6px;
+  border: 1px solid #ffaa22;
+  display: inline-block;
+  cursor: pointer;
+  color: #333333;
+  font-family: Arial;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 6px 24px;
+  text-decoration: none;
+  /* text-shadow:0px 1px 0px #ffee66; */
+  margin-top: 5px;
+}
+.section2 form .myButton:hover {
+  background: linear-gradient(to bottom, #ffab23 5%, #ffec64 100%);
+  background-color: #ffab23;
+}
+.section2 form .myButton:active {
+  position: relative;
+  top: 1px;
+}
+.section2 p {
+  color: rgb(0, 0, 0);
+  display: inline-block;
+}
+.section2 span {
+  color: red;
+}
+
+footer.contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+footer.contact div.logo {
+  display: flex;
+  align-items: center;
+}
+footer.contact div.logo h1 {
+  font-size: 16px;
+  color: #1A1A1A;
+}
+footer.contact div.logo img {
+  padding: 0.5rem;
+}
+footer.contact div.phoneNumber {
+  display: flex;
+}
+footer.contact div.phoneNumber p {
+  font-size: 16px;
+  padding: 0.5rem;
+}
+
+div.goTop {
+  width: 5%;
+  position: fixed;
+  right: 2rem;
+  bottom: 1rem;
+  transition: all 0.2s;
+  z-index: 5;
+}
+@media screen and (max-width: 600px) {
+  div.goTop {
+    width: 10%;
+    right: 1rem;
+  }
+}
+@media screen and (max-width: 1000px) {
+  div.goTop {
+    min-width: 4rem;
+    right: 0.5rem;
+  }
+}
+div.goTop a {
+  padding: 1rem;
+}
+
+div.goTop:hover {
+  transform: scale(1.1);
+}
+
+.teacher {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.teacher .container3 {
+  display: flex;
+  width: 90%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.teacher .container3 .cont-course {
+  border: 3px solid black;
+  border-radius: 2%;
+  width: 25%;
+  margin: 3%;
+  background-color: #b6dfd2;
+}
+@media screen and (max-width: 1000px) {
+  .teacher .container3 .cont-course {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .teacher .container3 .cont-course {
+    width: 70%;
+  }
+}
+.teacher .container3 .cont-course p {
+  padding: 0 3%;
+  font-size: 16px;
+}/*# sourceMappingURL=style2.css.map */
