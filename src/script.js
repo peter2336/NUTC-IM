@@ -88,3 +88,27 @@ function goTop(){
         behavior:"smooth"
     });
 }
+
+let header = document.querySelector("header");
+let headerTitle = document.querySelector("header div.logo h1");
+let hamburger = document.querySelectorAll(".wrapper .container2 .meaulogo");
+let headerLogo = document.querySelector("header div.logo a img");
+
+window.addEventListener("scroll", () => {
+    if(window.scrollY != 0) {
+        header.style.backgroundColor = "rgba(0,0,0,0.5)";
+        headerTitle.style.color = "white";
+        hamburger.forEach(a => {
+            a.style.backgroundColor = "white";
+        })
+        headerLogo.setAttribute("src", "./ICONS/iconmonstr-school-4-240.png");
+    }
+    else {
+        header.style.backgroundColor = "";
+        headerTitle.style.color = "black";
+        hamburger.forEach(a => {
+            a.style.backgroundColor = "";
+        })
+        headerLogo.setAttribute("src", "./ICONS/iconmonstr-school-4.svg");
+    }
+})
