@@ -1,2 +1,2 @@
 # NUTC-IM
-#這是與我同學JUN一起練習的作品-補習班網站，還在製作當中。
+#這是與我同學JUN剛開始一起練習的HTML、Javascript、CSS切版。
